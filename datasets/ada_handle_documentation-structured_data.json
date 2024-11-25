@@ -1,0 +1,42 @@
+[
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'https://api.handle.me/swagger' API?",
+        "assistant": "This API is used for interacting with the Handles API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the endpoint 'https://api.handle.me/swagger/#/handles/get_handles' used for?",
+        "assistant": "This endpoint in the Handles API is used for getting handles."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the endpoint 'https://api.handle.me/swagger/#/handles/get_handles__handle__datum' do?",
+        "assistant": "This endpoint in the Handles API allows you to get the datum of a specific handle."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the endpoint 'https://api.handle.me/swagger/#/handles/get_handles__handle__personalized'?",
+        "assistant": "This endpoint in the Handles API allows you to get the personalized details of a specific handle."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'https://api.handle.me/swagger/#/handles/post_handles_list' endpoint do?",
+        "assistant": "This endpoint in the Handles API allows you to post a list of handles."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'https://api.handle.me/swagger/#/holders/get_holders' endpoint?",
+        "assistant": "This endpoint in the Handles API is used for getting holders."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What can the 'https://api.handle.me/swagger/#/utils/get_stats' endpoint be used for?",
+        "assistant": "This endpoint in the Handles API is used for getting statistical data."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the 'https://api.handle.me/swagger/#/utils/post_datum' endpoint?",
+        "assistant": "This endpoint in the Handles API allows you to post a datum."
+    }
+]

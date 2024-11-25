@@ -1,0 +1,2437 @@
+[
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is Blockfrost.io?",
+        "assistant": "Blockfrost.io is an instant, highly optimized, public and freely accessible API as a Service that serves as an alternative access to the Cardano blockchain and related networks, with extra features, without the need for running and maintaining additional infrastructure and tooling yourself. Blockfrost.io is also a IPFS provider, allowing you to add and pin resources as well as access IPFS network through their IPFS Gateway clusters. It is a highly available and resilient multi-network platform hosted in multiple data centers all around the globe."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of Blockfrost.io's API?",
+        "assistant": "Blockfrost.io's API allows users to interact with the Cardano blockchain and parts of its ecosystem."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is required for authentication against Blockfrost servers?",
+        "assistant": "The HTTP header of your request must include the automatically generated 'project_id' token for each project to authenticate against Blockfrost servers."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks can I use with Blockfrost.io?",
+        "assistant": "You can use the following networks with Blockfrost.io: Cardano mainnet, Cardano preprod, Cardano preview, InterPlanetary File System, Milkomeda mainnet, and Milkomeda testnet."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the limitations for uploading files to IPFS through Blockfrost.io?",
+        "assistant": "Through Blockfrost.io, you are allowed to upload files up to 100MB in size to IPFS. Only pinned IPFS files are counted towards the IPFS quota. Non-pinned IPFS files are subject to regular garbage collection and will be removed unless pinned. A maximum of 100 queued pins per IPFS user is allowed."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What HTTP status codes might my application receive when reaching Blockfrost endpoints?",
+        "assistant": "Your application might receive the following HTTP status codes when reaching Blockfrost endpoints: 400, 402, 403, 404, 418, 425, 429, 500. Each of these codes corresponds to a different type of error or status."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the types of limits enforced by Blockfrost.io?",
+        "assistant": "Blockfrost.io enforces two types of limits: the first depends on your plan and is the number of requests allowed per day."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the limit for user requests per second?",
+        "assistant": "The limit for user requests is 10 requests per second."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many requests can a user send in a burst?",
+        "assistant": "A user can send a burst of 500 requests."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "After how many seconds can a user make another whole burst of requests?",
+        "assistant": "A user can make another whole burst of requests after 50 seconds."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What programming languages are supported by Blockfrost SDKs?",
+        "assistant": "Blockfrost SDKs support JavaScript, Haskell, Python, Rust, Golang, Ruby, Java, Scala, Swift, Kotlin, Elixir, .NET, Arduino, PHP, and Crystal."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the security scheme type for Blockfrost?",
+        "assistant": "The security scheme type for Blockfrost is apiKey."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the header parameter name for the Blockfrost API?",
+        "assistant": "The header parameter name for the Blockfrost API is 'project_id'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can you contribute to the Blockfrost Developer Hub?",
+        "assistant": "You can contribute to the Blockfrost Developer Hub through community contributions. Blockfrost publishes bounties in form of GitHub issues, which are then up for grabs. After creating a pull request and getting it reviewed and accepted by the Blockfrost team, you can claim your bounty."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the first step to use the Blockfrost hosted API?",
+        "assistant": "In order to use Blockfrost hosted API, you first need to create an account."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How does one create a first project in Blockfrost?",
+        "assistant": "Once you have your account ready, you can create your first project. Click on '+ ADD PROJECT', pick up a name, and most importantly, select the right network. Click 'SAVE PROJECT' and a new secret API KEY, called 'project_id', is automatically generated."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'project_id' in Blockfrost?",
+        "assistant": "In Blockfrost, 'project_id' is a secret token that is associated with a project and is used to access the API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the first step to make a call to the Blockfrost API?",
+        "assistant": "To make the first call to the Blockfrost API, you need to acquire your 'project_id' token and pass it as an HTTP header with the name 'project_id'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What should you never do with your PROJECT_ID?",
+        "assistant": "You should never share your PROJECT_ID publicly."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many plans does Blockfrost offer currently?",
+        "assistant": "Blockfrost currently offers four plans."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is one advantage of higher-tier plans on Blockfrost?",
+        "assistant": "Higher-tier plans on Blockfrost offer more features, higher request per day, and more storage capabilities."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can you upgrade your plan on Blockfrost?",
+        "assistant": "You can upgrade your plan on Blockfrost by logging in, clicking on your current plan name in the dashboard or directly through the provided link, and then clicking 'Upgrade plan'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is a requirement for downgrading your plan on Blockfrost?",
+        "assistant": "To downgrade your plan on Blockfrost, you need to ensure that the number of your projects is smaller or equal to the size of the new Plan."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens to unspent amount from your current plan when you downgrade on Blockfrost?",
+        "assistant": "Any unspent amount from your current plan will be transferred and deducted from the subsequent payment when you downgrade your plan on Blockfrost."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is a 'Requests Boost' on Blockfrost?",
+        "assistant": "A 'Requests Boost' on Blockfrost is an upgrade that increases the requests limit for a single day."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are projects in the context of Blockfrost?",
+        "assistant": "In the context of Blockfrost, projects are the basic building blocks. Each network requires a project and tokens, called project_ids, which are not interchangeable between networks."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What should you ensure before deleting a project on Blockfrost?",
+        "assistant": "Before deleting a project on Blockfrost, you should make sure that you don't actively use this token and, if the project is on the IPFS network, make sure you don't need your IPFS data anymore or have them backed up."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when a project is deleted?",
+        "assistant": "The project becomes irreversible and effective immediately. The project_id will be invalidated immediately and the related IPFS data will be garbage collected."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the billing cycle for the service?",
+        "assistant": "The billing cycle can be either monthly or yearly."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens to any unspent amount when a user upgrades or downgrades their plan?",
+        "assistant": "Any unspent amount from the current plan will be transferred and deducted from the subsequent payment."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can a user update their billing information?",
+        "assistant": "Users need to be logged in to update their billing information. They can click on 'Manage Billing' in the dropdown menu in the top right corner to be redirected to the Billing Portal where they can update their billing details or view past invoices."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the restrictions on user accounts?",
+        "assistant": "A user is limited to a single free account. Additional detected accounts and accounts created through temporary e-mail providers will be suspended and deleted."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are Access Filters in the Blockfrost Development Hub?",
+        "assistant": "Access filters serve as a defense mechanism for your project, protecting it from any unwanted or suspicious activity. With Endpoint allowlist, you can restrict access to Blockfrost API at the endpoint level, enabling access only to endpoints necessary for your project. Additionally, IP and Origin Allowlist can be used, ensuring that only your specific applications are granted access to the Blockfrost API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the best practices for using the Blockfrost API?",
+        "assistant": "Keep your API key secure and avoid placing it in client-side code. Use IP and Origin-based filters and enable access only to the endpoints your project truly needs. Create a new project for each application to tailor access filters to each application's specific needs."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of Blockfrost Workspaces?",
+        "assistant": "Blockfrost Workspaces enable users to create collaborative spaces for sharing projects with other team members. They help streamline billing management and allow developers to focus on building the application."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can a user add members to a Blockfrost Workspace?",
+        "assistant": "Navigate to the dropdown menu and select 'Manage workspace', or alternatively, access the workspace settings directly from the dashboard. Generate a new invitation link, and upon acceptance, the new member will appear in your workspace."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can ownership of a workspace be transferred?",
+        "assistant": "To transfer the ownership of a workspace, navigate to the workspace settings page and click on the three-dot menu located in the top-right corner. Select 'Transfer Ownership' to initiate the process. The selected new owner should have a subscription with sufficient available resources."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the four distinct roles offered in Blockfrost Workspaces?",
+        "assistant": "The document mentions the existence of four distinct roles in Blockfrost Workspaces but does not provide details on what these roles are."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What permissions does the workspace owner have?",
+        "assistant": "The workspace owner has full permissions, including managing billing, projects, and members. They are automatically assigned these permissions upon workspace creation. This role cannot be changed or removed by other members."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What can an Administrator do in a workspace?",
+        "assistant": "Administrators possess nearly the same permissions as the Owner. They can manage billing, workspace projects, and members, as well as generate new invites. However, they lack the ability to delete the workspace."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the responsibilities of a Maintainer in a workspace?",
+        "assistant": "Maintainers have the ability to create new projects and update or delete existing ones, ensuring efficient project management."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What level of access does a Collaborator have in a workspace?",
+        "assistant": "Collaborators have read-only access to all workspace projects. They can review project information without making modifications."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is an SDK?",
+        "assistant": "SDK stands for 'Software Development Kit'. It provides a set of tools, libraries, relevant documentation, code samples, processes and guides that allow developers to create software applications on a specific platform."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does it mean for data to be returned in ascending order?",
+        "assistant": "Data returned in ascending order means the oldest data is presented first, followed by the newer data."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are Lovelaces in the context of the Blockfrost Development Hub?",
+        "assistant": "In the context of the Blockfrost Development Hub, Lovelaces are a unit of measurement for ADA, where 1 ADA equals 1,000,000 Lovelaces."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the default and supported networks of Blockfrost?",
+        "assistant": "The default Blockfrost network is Cardano mainnet. The supported networks include Cardano testnets (preview and preprod), IPFS, and Milkomeda networks."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the three types of limits enforced by Blockfrost?",
+        "assistant": "Blockfrost enforces three types of limits: 1) The number of requests allowed per day, based on your plan; 2) Rate limiting, which limits a user (distinguished by IP address) to 10 requests per second with bursts of up to 500 requests; 3) For IPFS only, there is a maximum limit of queued items scheduled to be pinned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the HTTP 403 return code signify?",
+        "assistant": "The HTTP 403 return code is used when the request is not authenticated."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the HTTP 404 return code represent?",
+        "assistant": "The HTTP 404 return code is used when the resource doesn't exist."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "When is the HTTP 418 return code used?",
+        "assistant": "HTTP 418 return code is used when the user has been auto-banned for flooding too much after previously receiving error code 402 or 429."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the significance of HTTP 425 return code in Cardano networks?",
+        "assistant": "In Cardano networks, HTTP 425 return code is used when the user has submitted a transaction when the mempool is already full, not accepting new txs straight away."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "When is the HTTP 425 return code used in IPFS network?",
+        "assistant": "In IPFS network, HTTP 425 is used when a user has reached the maximum allowed items queued to be pinned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the HTTP 429 return code indicate?",
+        "assistant": "HTTP 429 return code is used when the user has sent too many requests in a given amount of time and therefore has been rate-limited."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the HTTP 500 return code mean?",
+        "assistant": "HTTP 500 return code is used when our endpoints are having a problem."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What action should you take when receiving error 402 in IPFS?",
+        "assistant": "If using IPFS, check if your quota hasn't been exceeded. Then either remove some pins or upgrade your plan."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does receiving a 404 error indicate?",
+        "assistant": "Receiving a 404 error indicates that the resource doesn't exist on the blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What should you do when receiving a 425 error in Cardano?",
+        "assistant": "When receiving a 425 error in Cardano, retry submitting the transaction and if you receive another 425, wait a few seconds before trying again."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What should you do when receiving a 429 error?",
+        "assistant": "When receiving a 429 error, consider upgrading plan to ENTERPRISE, which allows custom rate-limiting rules."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What steps should you take when receiving a 5xx error?",
+        "assistant": "When receiving a 5xx error, wait a few moments before retrying again and if the problem still persists, contact the support and share the call details (URL) with them."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can you get help with common API HTTP error codes?",
+        "assistant": "For help on dealing with most common API HTTP error codes, visit this page on Blockfrost Support and FAQ."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can Blockfrost customers contact support?",
+        "assistant": "All Blockfrost customers can contact support via support form available at the Blockfrost homepage."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What services does Blockfrost.io provide?",
+        "assistant": "Blockfrost.io provides a comprehensive set of API endpoints for interacting with the Cardano blockchain, Webhooks for real-time notifications, and IPFS for decentralized file storage."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the significance of the Blockfrost Transaction Submit API?",
+        "assistant": "Blockfrost's Transaction Submit API comes with a priority mempool, ensuring your transactions get the attention they deserve. It also provides rollback protection to safeguard your transactions against unexpected blockchain reorganizations."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the cost of the Developer plan per month excluding VAT?",
+        "assistant": "The Developer plan costs €79.00 per month excluding VAT."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many requests per day are supported on the Developer plan?",
+        "assistant": "The Developer plan supports 1,000,000 requests a day."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the storage limit on the Developer plan?",
+        "assistant": "The Developer plan provides 50,000 MB IPFS Storage."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many projects and webhooks can be included in the Developer plan?",
+        "assistant": "The Developer plan includes 10 projects and 10 webhooks."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What additional features does the Developer plan offer?",
+        "assistant": "The Developer plan offers 2 workspaces, access filters, and premium submit."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the features of the Enterprise plan?",
+        "assistant": "The Enterprise plan offers custom requests per day, IPFS infrastructure, projects, webhooks, workspaces, rate limiting, SLA, access filters, and premium submit."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the cost of the custom Enterprise plan per month?",
+        "assistant": "The cost of the custom Enterprise plan is not provided, it's custom priced per month."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many requests per day does the €29.00 per month plan support?",
+        "assistant": "The €29.00 per month plan supports 300,000 requests per day."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the storage limit on the €29.00 per month plan?",
+        "assistant": "The €29.00 per month plan provides 1,000 MB IPFS Storage."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What can be achieved if people are bred like dogs?",
+        "assistant": "The content does not provide specific details on what can be achieved if people are bred like dogs."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Can I replace a GFCI outlet in a bathroom with an outlet having USB ports?",
+        "assistant": "The content does not provide specific information on replacing a GFCI outlet in a bathroom with an outlet having USB ports."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the Cardano Developer Portal?",
+        "assistant": "The Cardano Developer Portal provides an overview of Cardano, helps understand its components, discover builder tools, learn technical concepts and connect to the developer community. It also offers information on how to integrate Cardano into applications and websites, create smart contracts, participate in governance and operate a stake pool."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is Blockfrost?",
+        "assistant": "Blockfrost is an API as a service that allows users to interact with the Cardano blockchain and parts of its ecosystem. After signing up, a project_id token is automatically generated for each project which must be included in the HTTP header of your request to authenticate against Blockfrost servers."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the Blockfrost API Documentation?",
+        "assistant": "The Blockfrost API Documentation provides detailed information on how to use different parts of the Blockfrost service. It includes information about tokens, available networks, concepts, errors, limits, SDKs, health, backend health status, and much more."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks are available for use with Blockfrost?",
+        "assistant": "Currently, you can use the following networks with Blockfrost: Cardano mainnet, Cardano preprod, Cardano preview, InterPlanetary File System, Milkomeda mainnet, and Milkomeda testnet. Each network has its own project_id."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default order of results returned?",
+        "assistant": "The default order of results is the last order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can I reverse the order of the results?",
+        "assistant": "You can reverse the order of results by using the '?order=desc' query parameter."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results returned at a time?",
+        "assistant": "By default, 100 results are returned at a time."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can one list through the results?",
+        "assistant": "You can list through the results by using '?page=2'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "In what format are addresses, accounts and pool IDs returned?",
+        "assistant": "Addresses, accounts and pool IDs are returned in the Bech32 format."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum file size allowed to be uploaded to IPFS?",
+        "assistant": "Files up to 100MB in size can be uploaded to IPFS."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Which IPFS files are counted towards the IPFS quota?",
+        "assistant": "Only pinned IPFS files are counted towards the IPFS quota."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum number of queued pins per IPFS user?",
+        "assistant": "The maximum number of queued pins per IPFS user is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does HTTP 404 return code mean?",
+        "assistant": "HTTP 404 return code is used when the resource doesn't exist."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the limit on the number of requests allowed per day?",
+        "assistant": "The limit depends on your plan and is the number of requests allowed per day."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the rate limiting policy?",
+        "assistant": "An end user, distinguished by IP address, is limited to 10 requests per second. On top of that, each user can send a burst of 500 requests, which cools off at a rate of 10 requests per second. A user is allowed to make another whole burst after (currently) 500/10 = 50 seconds."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What programming languages does Blockfrost support with SDKs?",
+        "assistant": "Blockfrost supports a number of SDKs, including JavaScript, Haskell, Python, Rust, Golang, Ruby, Java, Scala, Swift, Kotlin, Elixir, .NET, Arduino, PHP, and Crystal."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the root endpoint do?",
+        "assistant": "The root endpoint has no other function than to point end users to documentation."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the health endpoint?",
+        "assistant": "The health endpoint returns the backend status as a boolean. Your application should handle situations when backend for the given chain is unavailable."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the health/clock endpoint provide?",
+        "assistant": "The health/clock endpoint provides the current UNIX time. Your application might use this to verify if the client clock is not out of sync."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response signify when checking /health/clock?",
+        "assistant": "A 200 response signifies that the last 30 days of metrics are being returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response indicate?",
+        "assistant": "A 400 response indicates a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response indicate?",
+        "assistant": "A 403 response indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response indicate?",
+        "assistant": "A 404 response indicates that the component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response indicate?",
+        "assistant": "A 418 response indicates that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response indicate?",
+        "assistant": "A 429 response indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response indicate?",
+        "assistant": "A 500 response indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What type of content is returned by these APIs?",
+        "assistant": "The APIs return content in the application/json format."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the /metrics endpoint return?",
+        "assistant": "The /metrics endpoint returns the history of your Blockfrost usage metrics in the past 30 days."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What data does the /accounts/{stake_address} endpoint return?",
+        "assistant": "The /accounts/{stake_address} endpoint returns information about a specific stake account."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is needed to obtain information about a specific stake account?",
+        "assistant": "To obtain information about a specific stake account, you need the stake address."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the endpoint '/accounts/{stake_address}/rewards' return?",
+        "assistant": "It returns reward history of a specific account in Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks are available for the endpoint '/accounts/{stake_address}/rewards'?",
+        "assistant": "The available networks are Cardano Mainnet, Cardano Preprod, Cardano Preview and local."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the structure of the reward data returned by '/accounts/{stake_address}/rewards' endpoint?",
+        "assistant": "The reward data includes the epoch, the amount of reward, the pool id and the type of reward."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the endpoint '/accounts/{stake_address}/history' return?",
+        "assistant": "It returns the account history of a specific account in the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks are available for the endpoint '/accounts/{stake_address}/history'?",
+        "assistant": "The available networks are Cardano Mainnet, Cardano Preprod, Cardano Preview and local."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the structure of the account history data returned by '/accounts/{stake_address}/history' endpoint?",
+        "assistant": "The account history data includes the active epoch, the amount and the pool id."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses for the endpoint requests?",
+        "assistant": "The possible responses are 200 (Return the account content), 400 (Bad request), 403 (Authentication secret is missing or invalid), 404 (Component not found), 418 (IP has been auto-banned for extensive sending of requests after usage limit has been reached), 429 (Usage limit reached) and 500 (Internal Server Error)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default order of items from the point of view of the blockchain?",
+        "assistant": "By default, items are returned in ascending order (oldest first, newest last)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the endpoint to access delegations of a specific stake address on the Cardano Mainnet network?",
+        "assistant": "The endpoint is https://cardano-mainnet.blockfrost.io/api/v0/accounts/{stake_address}/delegations"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the endpoint to access delegations of a specific stake address on the Cardano Preprod network?",
+        "assistant": "The endpoint is https://cardano-preprod.blockfrost.io/api/v0/accounts/{stake_address}/delegations"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How to access delegations of a specific stake address on the local network?",
+        "assistant": "You can access it through the endpoint https://localhost:3000/accounts/{stake_address}/delegations"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes when accessing the account registration content?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, 500."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the endpoint to access registrations of a specific stake address on the Cardano Mainnet network?",
+        "assistant": "The endpoint is https://cardano-mainnet.blockfrost.io/api/v0/accounts/{stake_address}/registrations"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the endpoint to access withdrawals of a specific stake address on the Cardano Preprod network?",
+        "assistant": "The endpoint is https://cardano-preprod.blockfrost.io/api/v0/accounts/{stake_address}/withdrawals"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default order of items from the point of view of the blockchain when querying?",
+        "assistant": "By default, items are returned oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the range and default value for the 'count' parameter?",
+        "assistant": "The 'count' parameter can range from 1 to 100, with 100 as the default value."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code mean?",
+        "assistant": "A 403 response code means the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code mean?",
+        "assistant": "A 429 response code means the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the parameter 'stake_address'?",
+        "assistant": "'stake_address' is a required parameter represented as a string. It is used to specify the Bech32 stake address in order to obtain information about the MIRs or addresses of a specific account."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'count' parameter used for?",
+        "assistant": "The 'count' parameter is an integer that specifies the number of results to be displayed on one page. It can range from 1 to 100 and the default value is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'order' parameter do?",
+        "assistant": "The 'order' parameter is a string that determines the ordering of items from the perspective of the blockchain, not the page listing itself. By default, it returns the oldest first, newest last. The possible values are 'asc' for ascending order and 'desc' for descending order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default value for the 'page' parameter?",
+        "assistant": "The default value for the 'page' parameter is 1. This parameter is an integer that specifies the page number for listing the results, with the range being from 1 to 21474836."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean?",
+        "assistant": "A 200 response means that the request was successful and the account MIR or addresses content will be returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response indicate?",
+        "assistant": "A 400 response indicates that there was a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response signify?",
+        "assistant": "A 403 response signifies that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response mean?",
+        "assistant": "A 404 response means that the requested component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response mean?",
+        "assistant": "A 429 response indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response indicate?",
+        "assistant": "A 500 response indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the blockchain's perspective?",
+        "assistant": "The default ordering of items from the blockchain's perspective is oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean in the context of this API?",
+        "assistant": "A 200 response means that the account addresses content has been returned successfully."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response indicate?",
+        "assistant": "A 403 response indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the consequence of extensive sending of requests after the usage limit has been reached?",
+        "assistant": "The IP will be auto-banned, as indicated by a 418 response."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a response of 429 mean?",
+        "assistant": "A 429 response means that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is provided about account associated addresses?",
+        "assistant": "Detailed information about all addresses associated with a given account is provided, including summed details."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a Bech32 address refer to in the context of these API responses?",
+        "assistant": "In this context, a Bech32 address is an example of a stake address required by the API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is returned in a 200 response when querying information about a specific address?",
+        "assistant": "A 200 response when querying information about a specific address returns the address content."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is contained in the 'amount' field of the address content?",
+        "assistant": "The 'amount' field of an address content contains the quantity of different units associated with the address."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of obtaining extended information about a specific address?",
+        "assistant": "Obtaining extended information about a specific address provides detailed data such as the amount of currency, stake address, type and whether or not it involves a script."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses when requesting for extended information of a specific address?",
+        "assistant": "The responses can be 200 for successful return of the address content, 400 for bad request, 403 for missing or invalid authentication secret, 404 for component not found, 418 for auto-banning due to extensive requests after usage limit reached, 429 for usage limit reached, and 500 for internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can you obtain details about an address using the Cardano network?",
+        "assistant": "You can obtain details about an address by sending a GET request to the /addresses/{address}/total endpoint on Cardano's Mainnet, Preprod, Preview networks or localhost."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information can be obtained from the 'Address details' endpoint?",
+        "assistant": "The 'Address details' endpoint provides information such as the received sum, sent sum, and transaction count."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'Address UTXOs' endpoint?",
+        "assistant": "The 'Address UTXOs' endpoint provides the Unspent Transaction Outputs (UTXOs) of the address."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters can be set when querying the 'Address UTXOs' endpoint?",
+        "assistant": "When querying the 'Address UTXOs' endpoint, you can set parameters like the count which is the number of results displayed on one page, the page number for listing the results, and the order of results."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does 'Enum: asc desc' mean in the context of blockchain?",
+        "assistant": "It refers to the ordering of items from the perspective of the blockchain. 'asc' stands for ascending order, meaning oldest first. 'desc' stands for descending order, meaning newest first."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code mean?",
+        "assistant": "A 200 response code means the request was successful and the address content is returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response code indicate?",
+        "assistant": "A 400 response code indicates a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code indicate?",
+        "assistant": "A 403 response code indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response code mean?",
+        "assistant": "A 404 response code means that the requested component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response code mean?",
+        "assistant": "A 418 response code indicates that the IP has been auto-banned for sending extensive requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code mean?",
+        "assistant": "A 429 response code means that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response code mean?",
+        "assistant": "A 500 response code indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can you access the Cardano Mainnet network?",
+        "assistant": "You can access the Cardano Mainnet network via https://cardano-mainnet.blockfrost.io/api/v0/addresses/{address}/utxos."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are UTXOs of the address?",
+        "assistant": "UTXOs of the address are unspent transaction outputs of a given asset associated with a specific address."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum number of results that can be displayed on one page?",
+        "assistant": "The maximum number of results that can be displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default order of items?",
+        "assistant": "By default, items are returned in ascending order, meaning oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 429 status code mean in this context?",
+        "assistant": "The 429 status code means that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 500 status code indicate?",
+        "assistant": "The 500 status code indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the /addresses/{address}/utxos/{asset} endpoint?",
+        "assistant": "This endpoint is used to retrieve the unspent transaction outputs (UTXOs) for a specific address and asset on the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the different networks available for the Cardano API?",
+        "assistant": "The available networks for the Cardano API are the Cardano Mainnet network, the Cardano Preprod network, and the Cardano Preview network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the base URL for accessing the Cardano Mainnet network API?",
+        "assistant": "The base URL for accessing the Cardano Mainnet network API is https://cardano-mainnet.blockfrost.io/api/v0."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the response content type?",
+        "assistant": "The response content type is application/json."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the /addresses/{address}/txs endpoint do?",
+        "assistant": "The /addresses/{address}/txs endpoint returns the transaction history for a specific address on the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters are required for the /addresses/{address}/txs endpoint?",
+        "assistant": "The required parameter for the /addresses/{address}/txs endpoint is the address, which is a string in the Bech32 format. Optional parameters include count, page, and order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items returned from the endpoint?",
+        "assistant": "By default, items are returned in ascending order ('asc'), which means oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 status code mean?",
+        "assistant": "A 403 status code means that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of 'Address transactions'?",
+        "assistant": "Address transactions is used to track the transactions occurring on a specific address."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the range for the 'count' parameter in the query?",
+        "assistant": "The 'count' parameter in the query can range from 1 to 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default value for the 'count' parameter?",
+        "assistant": "The default value for the 'count' parameter is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the range for the 'page' parameter in the query?",
+        "assistant": "The 'page' parameter in the query can range from 1 to 21474836."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default value for 'order' parameter?",
+        "assistant": "The default value for the 'order' parameter is 'asc', which stands for ascending."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '400' response indicate?",
+        "assistant": "A '400' response indicates a 'Bad request'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '403' response indicate?",
+        "assistant": "A '403' response indicates that the 'Authentication secret is missing or invalid'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '429' response indicate?",
+        "assistant": "A '429' response indicates that the 'Usage limit has been reached'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '500' response indicate?",
+        "assistant": "A '500' response indicates an 'Internal Server Error'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is provided in the 'Response samples'?",
+        "assistant": "The 'Response samples' provides examples of what the server response might look like under different circumstances or for different input."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'Assets' section provide?",
+        "assistant": "The 'Assets' section provides a list of assets. If an asset is completely burned, it will stay on the list with quantity 0 (order of assets is immutable)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'Specific asset' section?",
+        "assistant": "The 'Specific asset' section provides information about a specific asset."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 400 error code signify?",
+        "assistant": "The 400 error code signifies a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does error code 403 mean?",
+        "assistant": "Error code 403 means the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 404 error code indicate?",
+        "assistant": "The 404 error code indicates that the component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does error code 418 mean?",
+        "assistant": "Error code 418 means the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 429 error code signify?",
+        "assistant": "The 429 error code signifies that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does error code 500 indicate?",
+        "assistant": "Error code 500 indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for the Cardano Mainnet network?",
+        "assistant": "The URL for the Cardano Mainnet network is https://cardano-mainnet.blockfrost.io/api/v0/assets/{asset}."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for the Cardano Preprod network?",
+        "assistant": "The URL for the Cardano Preprod network is https://cardano-preprod.blockfrost.io/api/v0/assets/{asset}."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for the Cardano Preview network?",
+        "assistant": "The URL for the Cardano Preview network is https://cardano-preview.blockfrost.io/api/v0/assets/{asset}."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for the local network?",
+        "assistant": "The URL for the local network is https://localhost:3000/assets/{asset}."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the content type for the response samples?",
+        "assistant": "The content type for the response samples is application/json."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the asset's fingerprint in the provided response sample?",
+        "assistant": "\"asset1pkpwyknlvul7az0xx8czhl60pyel45rpje4z8w\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the initial mint transaction hash in the provided response sample?",
+        "assistant": "\"6804edf9712d2b619edb6ac86861fe93a730693183a262b165fcc1ba1bc99cad\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the onchain metadata standard in the provided response sample?",
+        "assistant": "\"CIP25v1\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the name of the asset in the metadata of the provided response sample?",
+        "assistant": "\"nutcoin\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the description of the asset in the metadata of the provided response sample?",
+        "assistant": "\"The Nut Coin\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the ticker of the asset in the metadata of the provided response sample?",
+        "assistant": "\"nutc\"."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL of the asset in the metadata of the provided response sample?",
+        "assistant": "https://www.stakenuts.com/"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'asset' parameter in the API endpoint?",
+        "assistant": "The 'asset' parameter is a required string. It represents the concatenation of the policy_id and hex-encoded asset_name."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'count' parameter?",
+        "assistant": "The 'count' parameter is an integer between 1 and 100. It represents the number of results displayed on one page. The default value is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'page' parameter?",
+        "assistant": "The 'page' parameter is an integer from 1 to 21474836. It represents the page number for listing the results. The default value is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'order' parameter?",
+        "assistant": "The 'order' parameter is a string that determines the ordering of items from the point of view of the blockchain, not the page listing itself. It can be either 'asc' for ascending order or 'desc' for descending order. By default, it is set to 'asc' for oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean?",
+        "assistant": "A 200 response means that the information about the history of a specific asset has been returned successfully."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response mean?",
+        "assistant": "A 400 response means that the request was bad."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response mean?",
+        "assistant": "A 403 response means that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response mean?",
+        "assistant": "A 404 response means that the component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response mean?",
+        "assistant": "A 418 response means that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response mean?",
+        "assistant": "A 429 response means that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response mean?",
+        "assistant": "A 500 response means that there was an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can I access the Cardano Mainnet network?",
+        "assistant": "You can access the Cardano Mainnet network via https://cardano-mainnet.blockfrost.io/api/v0/assets/{asset}/history."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can I access the Cardano Preprod network?",
+        "assistant": "You can access the Cardano Preprod network via https://cardano-preprod.blockfrost.io/api/v0/assets/{asset}/history."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the request URL for the Cardano Preview network?",
+        "assistant": "The request URL for the Cardano Preview network is not provided in the given content."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the base URL for the Cardano Mainnet network?",
+        "assistant": "The base URL for the Cardano Mainnet network is https://cardano-mainnet.blockfrost.io/api/v0"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the base URL for the Cardano Preview network?",
+        "assistant": "The base URL for the Cardano Preview network is https://cardano-preview.blockfrost.io/api/v0"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How is the ordering of items from the point of view of the blockchain?",
+        "assistant": "The ordering of items from the point of view of the blockchain is either ascending (oldest first) or descending (newest last). By default, it returns oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code indicate?",
+        "assistant": "A 200 response code indicates that the information about the history of a specific asset is returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response code indicate?",
+        "assistant": "A 400 response code indicates a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code indicate?",
+        "assistant": "A 403 response code indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response code indicate?",
+        "assistant": "A 404 response code indicates that the component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response code indicate?",
+        "assistant": "A 418 response code indicates that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code indicate?",
+        "assistant": "A 429 response code indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response code indicate?",
+        "assistant": "A 500 response code indicates an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the parameter 'asset' in the context of this API?",
+        "assistant": "The 'asset' parameter is a required string that represents the concatenation of the policy_id and hex-encoded asset_name."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'count' parameter do?",
+        "assistant": "The 'count' parameter is an integer that sets the number of results displayed on one page. It ranges from 1 to 100, with a default value of 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How does the 'page' parameter function?",
+        "assistant": "The 'page' parameter is an integer that sets the page number for listing the results. It ranges from 1 to 21474836, with a default value of 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'order' parameter and how does it work?",
+        "assistant": "The 'order' parameter is a string that sets the ordering of items from the point of view of the blockchain, not the page listing itself. By default, it returns oldest first, newest last. It can be 'asc' for ascending order or 'desc' for descending order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response indicate?",
+        "assistant": "A 200 response indicates that the information about the history of a specific asset has been returned successfully."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response mean?",
+        "assistant": "A 403 response indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is indicated by a 418 response?",
+        "assistant": "A 418 response indicates that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response represent?",
+        "assistant": "A 500 response represents an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'policy_id' parameter?",
+        "assistant": "The 'policy_id' parameter is a required string that represents a specific policy id."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'get /blocks/latest' endpoint?",
+        "assistant": "The 'get /blocks/latest' endpoint returns the latest block available to the backends, also known as the tip of the blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information does the 'get /assets/{asset}/addresses' endpoint return?",
+        "assistant": "The 'get /assets/{asset}/addresses' endpoint returns the information about the history of a specific asset."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'get /assets/policy/{policy_id}' endpoint do?",
+        "assistant": "The 'get /assets/policy/{policy_id}' endpoint returns the information about a specific asset under a certain policy."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page when returning the transactions within the latest block?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the point of view of the blockchain when returning the transactions within the latest block?",
+        "assistant": "By default, the items are returned oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code mean when using the Cardano block APIs?",
+        "assistant": "A 403 response code means that the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code mean when using the Cardano block APIs?",
+        "assistant": "A 429 response code means that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response code mean when using the Cardano block APIs?",
+        "assistant": "A 418 response code means that IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameter is required when returning the content of a requested block?",
+        "assistant": "The required parameter is 'hash_or_number' which is a 64-character case-sensitive hexadecimal string or block number."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the different networks that the Cardano block APIs can be used with?",
+        "assistant": "The Cardano block APIs can be used with the Cardano Mainnet network, Cardano Preprod network, Cardano Preview network, and locally."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is returned when requesting the contents of a specific block?",
+        "assistant": "The returned information includes time, height, hash, slot, epoch, epoch_slot, slot_leader, size, tx_count, output, fees, block_vrf, op_cert, and op_cert_counter."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the procedure to return the list of blocks following a specific block on Cardano network?",
+        "assistant": "To return the list of blocks following a specific block on Cardano network, you need to have project_id authorization and provide the hash or number of the block as a string parameter in the path. The hash or number is a 64-character case-sensitive hexadecimal string or block number. You can also set the count (number of results per page) and page number for listing the results."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses while fetching the list of blocks following a specific block on Cardano network?",
+        "assistant": "The possible responses while fetching the list of blocks following a specific block are: 200 (return the contents of the block), 400 (bad request), 403 (authentication secret is missing or invalid), 404 (component not found), 418 (IP has been auto-banned for extensive sending of requests after usage limit has been reached), 429 (usage limit reached) and 500 (internal server error)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How to return the list of blocks preceding a specific block on Cardano network?",
+        "assistant": "To return the list of blocks preceding a specific block on Cardano network, you need to have project_id authorization and provide the hash or number of the block as a string parameter in the path. The hash or number is a 64-character case-sensitive hexadecimal string or block number. You can also set the count (number of results per page) and page number for listing the results."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses while fetching the list of blocks preceding a specific block on Cardano network?",
+        "assistant": "The possible responses while fetching the list of blocks preceding a specific block are: 200 (return the contents of the block), 400 (bad request), 403 (authentication secret is missing or invalid), 404 (component not found), 418 (IP has been auto-banned for extensive sending of requests after usage limit has been reached), 429 (usage limit reached) and 500 (internal server error)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the range for the count and page parameters when listing block results?",
+        "assistant": "The count parameter, which represents the number of results displayed on one page, ranges from 1 to 100 with a default of 100. The page parameter, which represents the page number for listing the results, ranges from 1 to 21474836 with a default of 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the specific block in a slot return?",
+        "assistant": "The specific block in a slot returns the content of a requested block for that specific slot."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the authorizations required for requesting a specific block in a slot?",
+        "assistant": "The authorizations required are the project_id and path."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is a parameter needed to request a specific block in a slot?",
+        "assistant": "The required parameter to request a specific block in a slot is the slot_number which is an integer."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses when requesting a specific block in a slot?",
+        "assistant": "The possible responses are 200 (Return the contents of the block), 400 (Bad request), 403 (Authentication secret is missing or invalid), 404 (Component not found), 418 (IP has been auto-banned for excessive requests after usage limit has been reached), 429 (Usage limit reached), and 500 (Internal Server Error)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the specific block in a slot in an epoch return?",
+        "assistant": "The specific block in a slot in an epoch returns the content of a requested block for a specific slot in an epoch."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the parameters needed to request a specific block in a slot in an epoch?",
+        "assistant": "The required parameters to request a specific block in a slot in an epoch are the epoch_number and slot_number, both of which are integers."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible responses when requesting a specific block in a slot in an epoch?",
+        "assistant": "The possible responses are 200 (Return the contents of the block), 400 (Bad request), 403 (Authentication secret is missing or invalid), 404 (Component not found), 418 (IP has been auto-banned for excessive requests after usage limit has been reached), 429 (Usage limit reached), and 500 (Internal Server Error)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'op_cert_counter' value?",
+        "assistant": "The 'op_cert_counter' value is 18."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the hash of the previous block?",
+        "assistant": "The hash of the previous block is '43ebccb3ac72c7cebd0d9b755a4b08412c9f5dcb81b8a0ad1e3c197d29d47b05'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the hash of the next block?",
+        "assistant": "The hash of the next block is '8367f026cf4b03e116ff8ee5daf149b55ba5a6ec6dec04803b8dc317721d15fa'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How many confirmations are there?",
+        "assistant": "There are 4698 confirmations."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default order of items?",
+        "assistant": "The default order of items is 'asc', meaning oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when the usage limit is reached?",
+        "assistant": "When the usage limit is reached, the IP is auto-banned for extensively sending requests."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 error code mean?",
+        "assistant": "A 500 error code indicates an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for accessing the Cardano Mainnet network?",
+        "assistant": "The URL for accessing the Cardano Mainnet network is 'https://cardano-mainnet.blockfrost.io/api/v0'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is returned by the 'blocks/{hash_or_number}/addresses' endpoint?",
+        "assistant": "The 'blocks/{hash_or_number}/addresses' endpoint returns a list of addresses affected in the specified block with additional information, sorted by the bech32 address, ascending."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is returned by the 'epochs/latest' endpoint?",
+        "assistant": "The 'epochs/latest' endpoint returns the information about the latest, therefore current, epoch."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the '/epochs/latest' endpoint?",
+        "assistant": "The '/epochs/latest' endpoint returns the protocol parameters for the latest epoch."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What response code is returned when the Authentication secret is missing or invalid?",
+        "assistant": "A 403 response code is returned when the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code signify?",
+        "assistant": "A 429 response code signifies that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the different networks for the Cardano API?",
+        "assistant": "The different networks for the Cardano API are Cardano Mainnet, Cardano Preprod, Cardano Preview and local network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information does the '/epochs/latest/parameters' endpoint provide?",
+        "assistant": "The '/epochs/latest/parameters' endpoint provides the protocol parameters for the latest epoch such as minimum fee, maximum block size, pool deposit, and various other parameters."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the '/epochs/{number}' endpoint?",
+        "assistant": "The '/epochs/{number}' endpoint returns the content of the requested epoch."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is returned by the '/epochs/{number}' endpoint?",
+        "assistant": "The '/epochs/{number}' endpoint returns information about the specific epoch, including start time, end time, first block time, last block time, block count, transaction count, output, fees, and active stake."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'Listing of next epochs' endpoint?",
+        "assistant": "The 'Listing of next epochs' endpoint returns the list of epochs following a specific epoch."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters are required for the 'Listing of next epochs' endpoint?",
+        "assistant": "The 'Listing of next epochs' endpoint requires the number of the requested epoch, count (number of results displayed on one page) and page (the page number for listing the results)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /epochs/{number}/next endpoint?",
+        "assistant": "This endpoint is used to get the data of the epoch that comes after a specific epoch in the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /epochs/{number}/previous endpoint?",
+        "assistant": "The /epochs/{number}/previous endpoint is used to get the data of the epoch that precedes a specific epoch in the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks are supported for the /epochs/{number}/next endpoint?",
+        "assistant": "The supported networks are Cardano Mainnet, Cardano Preprod, Cardano Preview, and local."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What networks are supported for the /epochs/{number}/previous endpoint?",
+        "assistant": "The supported networks are Cardano Mainnet, Cardano Preprod, Cardano Preview, and local."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /epochs/{number}/stakes endpoint?",
+        "assistant": "This endpoint returns the active stake distribution for the specified epoch in the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /epochs/{number}/stakes/{pool_id} endpoint?",
+        "assistant": "The /epochs/{number}/stakes/{pool_id} endpoint is used to return the active stake distribution for the epoch specified by stake pool in the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the response when the usage limit is reached?",
+        "assistant": "When the usage limit is reached, the response code is 429 and the message 'Usage limit reached' is returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '500' status code mean?",
+        "assistant": "A '500' status code means that there is an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a '400' status code mean?",
+        "assistant": "A '400' status code means that there was a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum number of results that can be displayed on one page?",
+        "assistant": "The maximum number of results that can be displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'stake_address' represent in the received response?",
+        "assistant": "The 'stake_address' represents a unique identifier for a stake in the Cardano blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'amount' signify in the given content?",
+        "assistant": "The 'amount' signifies the quantity of cryptocurrency held in the respective stake."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'number' represent in the parameters section?",
+        "assistant": "The 'number' parameter represents the number of the epoch for which information is required."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'count' query parameter represent?",
+        "assistant": "The 'count' query parameter represents the number of results displayed on one page."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'page' query parameter signify?",
+        "assistant": "The 'page' query parameter signifies the page number for listing the results."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the significance of 'order' query parameter?",
+        "assistant": "The 'order' query parameter determines the ordering of items from the point of view of the blockchain, not the page listing itself. By default, oldest results are returned first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'pool_id' represent in the parameters section?",
+        "assistant": "The 'pool_id' represents the ID of the stake pool to filter the results."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the meaning of 'min_fee_a' and 'min_fee_b' in the response samples?",
+        "assistant": "The 'min_fee_a' and 'min_fee_b' represent the minimum fees for transactions in the Cardano blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'max_block_size', 'max_tx_size' and 'max_block_header_size' represent?",
+        "assistant": "The 'max_block_size' represents the maximum size of a block, 'max_tx_size' represents the maximum size of a transaction, and 'max_block_header_size' represents the maximum size of a block header in the Cardano blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is signified by 'key_deposit' and 'pool_deposit' in the protocol parameters?",
+        "assistant": "The 'key_deposit' and 'pool_deposit' represent the deposit amounts for a key and a pool respectively in the Cardano blockchain."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the value of n_opt?",
+        "assistant": "The value of n_opt is 150."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the decentralisation parameter?",
+        "assistant": "The decentralisation parameter is 0.5."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the value of the protocol major version?",
+        "assistant": "The protocol major version is 2."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the minimum cost of the pool?",
+        "assistant": "The minimum pool cost is 340000000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the price of memory?",
+        "assistant": "The price of memory is 0.0577."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum transaction execution memory?",
+        "assistant": "The maximum transaction execution memory is 10000000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum block execution memory?",
+        "assistant": "The maximum block execution memory is 50000000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum value size?",
+        "assistant": "The maximum value size is 5000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the collateral percent?",
+        "assistant": "The collateral percent is 150."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum collateral inputs?",
+        "assistant": "The maximum collateral inputs is 3."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the active slots coefficient for Cardano Mainnet network?",
+        "assistant": "The active slots coefficient for Cardano Mainnet network is 0.05."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum lovelace supply for the Cardano Mainnet network?",
+        "assistant": "The maximum lovelace supply for the Cardano Mainnet network is 45000000000000000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the length of an epoch in the Cardano Mainnet network?",
+        "assistant": "The length of an epoch in the Cardano Mainnet network is 432000."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum KES evolutions in the Cardano Mainnet network?",
+        "assistant": "The maximum KES evolutions in the Cardano Mainnet network is 62."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the security parameter in the Cardano Mainnet network?",
+        "assistant": "The security parameter in the Cardano Mainnet network is 2160."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How can one return transactions stored in Blockfrost mempool?",
+        "assistant": "Transactions that are currently stored in Blockfrost mempool, waiting to be included in a newly minted block can be returned by accessing the mempool endpoint in the network's API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What's the content type of the response samples?",
+        "assistant": "The content type of the response samples is application/json."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the hash of the transaction in the given data?",
+        "assistant": "The hash of the transaction in the given data is '1e043f100dce12d107f679685acd2fc0610e10f72a92d412794c9773d11d8477'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the output amount of the transaction?",
+        "assistant": "The output amount of the transaction is '42000000' in 'lovelace' and '12' in 'b0d07d45fe9514f80213f4020e5a61241458be626841cde717cb38a76e7574636f696e'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the fees for the transaction?",
+        "assistant": "The fees for the transaction are '182485'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the size of the transaction?",
+        "assistant": "The size of the transaction is 433."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'invalid_hereafter' value for the transaction?",
+        "assistant": "The 'invalid_hereafter' value for the transaction is '13885913'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Is the contract valid?",
+        "assistant": "Yes, the contract is valid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the transaction index for the redeemer?",
+        "assistant": "The transaction index for the redeemer is 0."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the redeemer?",
+        "assistant": "The purpose of the redeemer is 'spend'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How is the order of transaction submission arranged by default?",
+        "assistant": "By default, the order of transaction submission is arranged from oldest first to newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the response when the usage limit is reached?",
+        "assistant": "The response when the usage limit is reached is status 429, 'Usage limit reached'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the local endpoint for mempool addresses?",
+        "assistant": "The local endpoint for mempool addresses is 'https://localhost:3000/mempool/addresses/{address}'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the transaction hash in the response samples?",
+        "assistant": "The transaction hash in the response samples is '1a0570af966fb355a7160e4f82d5a80b8681b7955f5d44bec0dce628516157f0'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'order' parameter represent in the context of the blockchain?",
+        "assistant": "The 'order' parameter represents the ordering of items from the point of view of the blockchain, not the page listing itself. By default, it returns oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code mean?",
+        "assistant": "A 403 response code means the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code mean?",
+        "assistant": "A 429 response code means the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the meaning of response code 418?",
+        "assistant": "Response code 418 means the IP has been auto-banned for extensive sending of requests after usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the content type for the response samples?",
+        "assistant": "The content type for the response samples is application/json."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the significance of the 'label' parameter in the query?",
+        "assistant": "The 'label' parameter in the query is used for specifying the metadata label."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the different Cardano networks mentioned?",
+        "assistant": "The different Cardano networks mentioned are Mainnet, Preprod, and Preview."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when the response code is 500?",
+        "assistant": "A response code of 500 indicates an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the '/network' endpoint in the Cardano API?",
+        "assistant": "The '/network' endpoint in the Cardano API returns detailed network information."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes from the Cardano API?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, 500. Each represents a different status of the request, ranging from success (200) to various types of errors."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code mean in the context of the Cardano API?",
+        "assistant": "A 200 response code means the request was successful and the requested information is returned."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the different Cardano networks that can be accessed through the API?",
+        "assistant": "The Cardano API allows access to the Cardano Mainnet network, Cardano Preprod network, Cardano Preview network, and the local network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the '/network/eras' endpoint in the Cardano API do?",
+        "assistant": "The '/network/eras' endpoint in the Cardano API returns the start and end of each blockchain era along with parameters that can vary between hard forks."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code mean in the context of the Cardano API?",
+        "assistant": "A 429 response code means that the usage limit has been reached for the API."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the '/pools' endpoint in the Cardano API do?",
+        "assistant": "The '/pools' endpoint in the Cardano API returns a list of registered stake pools."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters can be specified when using the '/pools' endpoint in the Cardano API?",
+        "assistant": "The parameters that can be specified are 'count' (the number of pools per page), 'page' (the page number for listing the results), and 'order' (the ordering of items from the point of view of the blockchain)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code mean in the context of the Cardano API?",
+        "assistant": "A 403 response code means that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of pools displayed per page?",
+        "assistant": "The default number of pools displayed per page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'order' parameter represent?",
+        "assistant": "The 'order' parameter represents the ordering of items from the point of view of the blockchain, not the page listing itself. By default, oldest are returned first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code represent?",
+        "assistant": "A 200 response code represents a successful request returning the list of pools or the pool information content."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response code represent?",
+        "assistant": "A 400 response code represents a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code represent?",
+        "assistant": "A 403 response code represents an authentication error, indicating that the secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response code represent?",
+        "assistant": "A 404 response code represents a 'Component not found' error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response code represent?",
+        "assistant": "A 418 response code represents an IP that has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code represent?",
+        "assistant": "A 429 response code represents that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response code represent?",
+        "assistant": "A 500 response code represents an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is included for each listed stake pool?",
+        "assistant": "Each listed stake pool includes the pool ID, hex, active stake, and live stake."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What additional information is included for each retired stake pool?",
+        "assistant": "Each retired stake pool also includes the epoch at which it was retired."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the point of view of the blockchain?",
+        "assistant": "By default, items are ordered from the oldest first to the newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the API endpoint to get retiring pools on the Cardano Preprod network?",
+        "assistant": "The API endpoint is https://cardano-preprod.blockfrost.io/api/v0/pools/retiring"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes for the API endpoints?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, 500."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the content type for the API responses?",
+        "assistant": "The content type for the API responses is application/json."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'pool_id' parameter represent?",
+        "assistant": "The 'pool_id' parameter represents the Bech32 or hexadecimal pool ID."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the API endpoint to get specific stake pool information on the Cardano Mainnet network?",
+        "assistant": "The API endpoint is https://cardano-mainnet.blockfrost.io/api/v0/pools/{pool_id}"
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the meaning of response code 403?",
+        "assistant": "Response code 403 means Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'count' query parameter represent?",
+        "assistant": "The 'count' query parameter represents the number of results displayed on one page."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'order' query parameter represent?",
+        "assistant": "The 'order' query parameter represents the ordering of items from the point of view of the blockchain, not the page listing itself."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /pools/{pool_id}/history endpoint?",
+        "assistant": "The /pools/{pool_id}/history endpoint is used to fetch the history of a particular pool using its ID."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes for the /pools/{pool_id}/history endpoint?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, and 500."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What kind of data is returned by the /pools/{pool_id}/history endpoint?",
+        "assistant": "The /pools/{pool_id}/history endpoint returns data including epoch, blocks, active stake, active size, delegators count, rewards, and fees."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the /pools/{pool_id}/metadata endpoint?",
+        "assistant": "The /pools/{pool_id}/metadata endpoint is used to return the pool metadata content."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is included in the pool metadata?",
+        "assistant": "The pool metadata includes pool_id, hex, url, hash, ticker, name, description, and homepage."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /pools/{pool_id}/relays endpoint?",
+        "assistant": "The /pools/{pool_id}/relays endpoint is used for returning the pool relays information content."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the role of the /pools/{pool_id}/delegators endpoint?",
+        "assistant": "The /pools/{pool_id}/delegators endpoint is used to list the current stake pools delegators."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters can be used with the /pools/{pool_id}/delegators endpoint?",
+        "assistant": "The /pools/{pool_id}/delegators endpoint can use parameters like pool_id, count, page, and order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes for the /pools/{pool_id}/delegators endpoint?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, and 500."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the content type mentioned in the data?",
+        "assistant": "The content type mentioned in the data is 'application/json'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the live stake for the address 'stake1ux4vspfvwuus9uwyp5p3f0ky7a30jq5j80jxse0fr7pa56sgn8kha'?",
+        "assistant": "The live stake for the address 'stake1ux4vspfvwuus9uwyp5p3f0ky7a30jq5j80jxse0fr7pa56sgn8kha' is '1137959159981411'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum count for the results displayed on one page?",
+        "assistant": "The maximum count for the results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default page number for listing the results?",
+        "assistant": "The default page number for listing the results is 1."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the point of view of the blockchain?",
+        "assistant": "The default ordering of items from the point of view of the blockchain is 'asc', which means oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 400 response code indicate?",
+        "assistant": "The 400 response code indicates a Bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 403 response code indicate?",
+        "assistant": "The 403 response code indicates that the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when the usage limit is reached?",
+        "assistant": "When the usage limit is reached, the IP has been auto-banned for extensive sending of requests, indicated by the 429 response code."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the action performed by the certificate with transaction hash '9c190bc1ac88b2ab0c05a82d7de8b71b67a9316377e865748a89d4426c0d3005'?",
+        "assistant": "The action performed by the certificate with transaction hash '9c190bc1ac88b2ab0c05a82d7de8b71b67a9316377e865748a89d4426c0d3005' is 'deregistered'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum number of results displayed on one page for the list of scripts?",
+        "assistant": "The maximum number of results displayed on one page for the list of scripts is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the point of view of the blockchain?",
+        "assistant": "By default, the items are ordered oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean?",
+        "assistant": "A 200 response means the request was successful. It returns a list of scripts."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response imply?",
+        "assistant": "A 400 response indicates a bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response indicate?",
+        "assistant": "A 403 response indicates that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response signify?",
+        "assistant": "A 404 response signifies that the component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response mean?",
+        "assistant": "A 418 response means that the IP has been auto-banned for extensive sending of requests after usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response indicate?",
+        "assistant": "A 429 response indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response signify?",
+        "assistant": "A 500 response signifies an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'get /scripts' endpoint?",
+        "assistant": "The 'get /scripts' endpoint is used to retrieve a list of scripts from the Cardano networks."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'get /scripts/{script_hash}' endpoint?",
+        "assistant": "The 'get /scripts/{script_hash}' endpoint is used to return the information about a specific script."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'get /scripts/{script_hash}/json' endpoint?",
+        "assistant": "The 'get /scripts/{script_hash}/json' endpoint is used to return the JSON representation of a timelock script."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'get /scripts/{script_hash}/cbor' endpoint?",
+        "assistant": "The 'get /scripts/{script_hash}/cbor' endpoint is used to return the CBOR representation of a plutus script."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'script_hash' parameter?",
+        "assistant": "The 'script_hash' parameter refers to the hash of the script you want information about."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'count' parameter represent?",
+        "assistant": "The 'count' parameter represents the number of results displayed on one page."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the role of the 'order' parameter?",
+        "assistant": "The 'order' parameter determines the ordering of items from the point of view of the blockchain, not the page listing itself. By default, 'asc' is returned, meaning oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code signify?",
+        "assistant": "A 200 response code signifies that the information about redeemers of a specific script has been returned successfully."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response code mean?",
+        "assistant": "A 404 response code means that the requested component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'datum_hash' parameter represent?",
+        "assistant": "The 'datum_hash' parameter represents the hash of the datum that you are querying."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'hash' parameter in the transaction request?",
+        "assistant": "The 'hash' parameter in the transaction request refers to the hash of the transaction that you want to retrieve information about."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code indicate?",
+        "assistant": "A 429 response code indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response code denote?",
+        "assistant": "A 500 response code denotes an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the 'blockfrost.io/api/v0/txs/{hash}' endpoint?",
+        "assistant": "This endpoint is used to access transaction information on the Cardano network using a specific transaction hash."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes from the Blockfrost API and what do they mean?",
+        "assistant": "200 - Successful request. 400 - Bad request. 403 - Authentication secret is missing or invalid. 404 - Component not found. 418 - IP has been auto-banned for extensive sending of requests after usage limit has been reached. 429 - Usage limit reached. 500 - Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What type of content does the Blockfrost API return?",
+        "assistant": "The Blockfrost API returns content in the 'application/json' format."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'hash' parameter in the Blockfrost API endpoint?",
+        "assistant": "The 'hash' parameter represents a 64-character case-sensitive hexadecimal string. It is the hash of the requested transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the 'blockfrost.io/api/v0/txs/{hash}/utxos' endpoint?",
+        "assistant": "This endpoint is used to return the inputs and UTXOs (Unspent Transaction Outputs) of a specific transaction on the Cardano network."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information can be found in the 'inputs' and 'outputs' sections of the UTXOs endpoint response?",
+        "assistant": "The 'inputs' section contains information about the input transactions including their addresses, amounts, transaction hashes, output indexes, and data hashes. The 'outputs' section contains information about the output transactions including their addresses, amounts, output indexes, and data hashes."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information does the transaction stake addresses certificates provide?",
+        "assistant": "The transaction stake addresses certificates provide information about (de)registration of stake addresses within a transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the requirement for the hash parameter?",
+        "assistant": "The hash parameter is a required 64-character case-sensitive hexadecimal string."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response code indicate?",
+        "assistant": "A 403 response code indicates that the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response code indicate?",
+        "assistant": "A 429 response code indicates that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the transaction delegation certificates?",
+        "assistant": "The transaction delegation certificates are used to obtain information about delegation certificates of a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the transaction withdrawal?",
+        "assistant": "The transaction withdrawal is used to obtain information about withdrawals of a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the Transaction MIRs?",
+        "assistant": "The Transaction MIRs are used to obtain information about Move Instantaneous Rewards (MIRs) of a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 error message mean?",
+        "assistant": "A 418 error message means that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 error message signify?",
+        "assistant": "A 429 error message signifies that the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is a 500 error?",
+        "assistant": "A 500 error signifies an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the /txs/{hash}/mirs endpoint?",
+        "assistant": "The /txs/{hash}/mirs endpoint is used to obtain information about stake pool registration and update certificates of a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the expected format of the 'hash' parameter?",
+        "assistant": "The 'hash' parameter should be a 64-character case-sensitive hexadecimal string."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean?",
+        "assistant": "A 200 response means that the request was successful and the information about stake pool certificates of a specific transaction has been obtained."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the /txs/{hash}/pool_updates endpoint?",
+        "assistant": "The /txs/{hash}/pool_updates endpoint is used to obtain information about stake pool updates of a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information can be obtained from the /txs/{hash}/pool_retires endpoint?",
+        "assistant": "The /txs/{hash}/pool_retires endpoint provides information about stake pool retirements within a specific transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the significance of a 403 error message?",
+        "assistant": "A 403 error message means that the authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 error message mean?",
+        "assistant": "A 404 error message means that the requested component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How do you obtain the transaction metadata?",
+        "assistant": "You obtain the transaction metadata by making a GET request to /txs/{hash}/metadata on the Cardano network that you are using. The hash is a required string parameter, and it is a 64-character case-sensitive hexadecimal string representing the hash of the requested transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the possible response codes when obtaining transaction metadata?",
+        "assistant": "The possible response codes are 200, 400, 403, 404, 418, 429, and 500. Each code represents a specific state such as obtaining metadata information associated with a specific transaction (200), bad request (400), authentication secret is missing or invalid (403), component not found (404), IP has been auto-banned for extensive sending of requests after usage limit has been reached (418), usage limit reached (429), and internal server error (500)."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How do you obtain the transaction metadata in CBOR?",
+        "assistant": "You can obtain the transaction metadata in CBOR by making a GET request to /txs/{hash}/metadata/cbor on the Cardano network that you are using. The hash is a required string parameter that is a 64-character case-sensitive hexadecimal string representing the hash of the requested transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the process to obtain the transaction redeemers?",
+        "assistant": "The transaction redeemers can be obtained by making a GET request to /txs/{hash}/redeemers on the Cardano network that you are using. The hash parameter is required and it should be a 64-character case-sensitive hexadecimal string which represents the hash of the requested transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "How do you submit a transaction to the network?",
+        "assistant": "You submit an already serialized transaction to the network by making a POST request. This endpoint is only available for the hosted variant. The transaction to submit is serialized in CBOR and is a required string parameter."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response mean when submitting a transaction?",
+        "assistant": "A 200 response indicates that the transaction was successfully submitted, returning the ID of the submitted transaction."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 400 response mean?",
+        "assistant": "A 400 response means that there was a Bad request."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 403 response mean?",
+        "assistant": "A 403 response means that the Authentication secret is missing or invalid."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 404 response mean?",
+        "assistant": "A 404 response means that the Component was not found."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 418 response mean?",
+        "assistant": "A 418 response means that the IP has been auto-banned for extensive sending of requests after the usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 425 response mean?",
+        "assistant": "A 425 response means that the Mempool is already full, not accepting new transactions straight away."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 429 response mean?",
+        "assistant": "A 429 response means that the Usage limit has been reached."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response mean?",
+        "assistant": "A 500 response indicates an Internal Server Error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the content type for a transaction submission?",
+        "assistant": "The content type for a transaction submission is 'application/cbor'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the '/utils/addresses/xpub/{xpub}/{role}/{index}' endpoint?",
+        "assistant": "The '/utils/addresses/xpub/{xpub}/{role}/{index}' endpoint is used to derive a Shelley address from an xpub."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What parameters are required when deriving a Shelley address?",
+        "assistant": "The required parameters are 'xpub', 'role', and 'index'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the '/utils/txs/evaluate' endpoint?",
+        "assistant": "The '/utils/txs/evaluate' endpoint is used to submit an already serialized transaction to evaluate how much execution units it requires."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does submitting a JSON payload with transaction CBOR and additional UTXO set help with?",
+        "assistant": "It helps to evaluate how much execution units a transaction requires."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the requirement for the 'Content-Type' parameter?",
+        "assistant": "The 'Content-Type' parameter requires a string value of 'application/json'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'cbor' in the JSON payload refer to?",
+        "assistant": "The 'cbor' refers to the transaction CBOR which is encoded using base64 or base16."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the 'additionalUtxoSet' in the JSON payload?",
+        "assistant": "The 'additionalUtxoSet' is an array of tuples [TxIn, TxOut] representing additional UTXO."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the function of the '/ipfs/add' endpoint?",
+        "assistant": "The '/ipfs/add' endpoint is used to add a file to IPFS."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the '/ipfs/gateway/{IPFS_path}' endpoint?",
+        "assistant": "The '/ipfs/gateway/{IPFS_path}' endpoint is used to retrieve an object from the IPFS gateway."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does pinning an object in IPFS do?",
+        "assistant": "Pinning an object in IPFS is necessary to avoid regular garbage collection (deletion) of the object."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens to non-pinned objects in IPFS?",
+        "assistant": "Non-pinned objects in IPFS are regularly being removed without prior notice."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Are pinned objects in IPFS counted in the user storage quota?",
+        "assistant": "Yes, pinned objects are counted in your user storage quota."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when the IPFS pin queue is full?",
+        "assistant": "When the IPFS pin queue is full, it does not accept new transactions straight away."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page when listing pinned objects?",
+        "assistant": "The default number of results displayed on one page when listing pinned objects is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default ordering of items from the point of view of the blockchain when listing pinned objects?",
+        "assistant": "By default, items are returned oldest first, newest last when listing pinned objects."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is retrieved when getting details about a pinned object?",
+        "assistant": "When getting details about a pinned object, it provides the time when it was created, the time it was pinned, the IPFS hash, the size, and the state."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when removing a pinned object from IPFS?",
+        "assistant": "When removing a pinned object from IPFS, the state of the object changes to 'unpinned'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What information is retrieved when listing metadata about a specific address?",
+        "assistant": "When listing metadata about a specific address, it provides the address, the metadata URL, and the metadata hash."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default number of results displayed on one page?",
+        "assistant": "The default number of results displayed on one page is 100."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does the 'order' parameter do?",
+        "assistant": "The 'order' parameter determines the ordering of items from the point of view of the blockchain, not the page listing itself. By default, it returns oldest first, newest last."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the default value for the 'order' parameter?",
+        "assistant": "The default value for the 'order' parameter is 'asc', which means ascending order."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What happens when the usage limit is reached?",
+        "assistant": "When the usage limit is reached, the IP can be auto-banned for extensive sending of requests."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the response code for a bad request?",
+        "assistant": "The response code for a bad request is 400."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 200 response code mean?",
+        "assistant": "A 200 response code means that the tickers provided by the metadata oracle are returned successfully."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the maximum page number for listing the results?",
+        "assistant": "The maximum page number for listing the results is 21474836."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the purpose of the 'address' parameter?",
+        "assistant": "The 'address' parameter is used to specify the address of a metadata oracle."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What does a 500 response code represent?",
+        "assistant": "A 500 response code represents an internal server error."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the transaction hash in the given data?",
+        "assistant": "The transaction hash is e8073fd5318ff43eca18a852527166aa8008bee9ee9e891f585612b7e4ba700b."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the block height mentioned in the data?",
+        "assistant": "The block height mentioned in the data is 2657092."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the tx_index mentioned in the data?",
+        "assistant": "The tx_index mentioned in the data is 8."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What are the sources and their respective values in the payload?",
+        "assistant": "The sources in the payload are 'coinGecko' and 'cryptoCompare', with respective values '1.29' and '1.283'."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the main service provided by blockfrost according to the github page?",
+        "assistant": "Blockfrost provides Cardano API-as-a-Service."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the URL for Blockfrost's Twitter page?",
+        "assistant": "The URL for Blockfrost's Twitter page is https://twitter.com/blockfrost."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is the link to the subreddit for Cardano developers?",
+        "assistant": "The link to the subreddit for Cardano developers is https://www.reddit.com/r/CardanoDevelopers/."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "What is QuickCheck?",
+        "assistant": "QuickCheck is an advanced testing technique used for creating robust and secure DApps and applications."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Who provides a comprehensive guide on mastering QuickCheck?",
+        "assistant": "MLabs provides a comprehensive guide on mastering QuickCheck."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Who is MLabs?",
+        "assistant": "MLabs is a leading devshop and consultancy building on Cardano."
+    },
+    {
+        "system": "You are Cardevia, a helpful and incredibly knowledgeable blockchain development assistant.",
+        "user": "Where can I find MLabs' guide on mastering QuickCheck?",
+        "assistant": "You can find MLabs' guide on mastering QuickCheck at https://library.mlabs.city/mastering-quickcheck."
+    }
+]
