@@ -17,6 +17,8 @@ The `/datasets` directory contains the following collections:
 - `cardano_graphQL_repo-structured_data.json` - Documentation from the Cardano GraphQL repository
 - `cardano_wallet_repo-structured_data.json` - Documentation from the Cardano Wallet repository
 
+These datasets are also available at: [https://huggingface.co/datasets/decimalist/cardano](https://huggingface.co/datasets/decimalist/cardano)
+
 ## Usage
 
 These datasets are available in JSON format and can be used for:
